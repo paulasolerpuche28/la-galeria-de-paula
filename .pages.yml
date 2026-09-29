@@ -1,0 +1,135 @@
+media:
+  input: images/uploads
+  output: /images/uploads
+
+content:
+  - name: site
+    label: La galería de Paula
+    type: file
+    path: content/site.json
+    format: json
+    operations:
+      delete: false
+
+    fields:
+      - name: hero
+        label: Portada
+        type: object
+        fields:
+          - name: image
+            label: Fotografía principal
+            type: image
+
+          - name: kicker
+            label: Línea superior
+            type: string
+
+          - name: description
+            label: Texto de portada
+            type: text
+
+          - name: location
+            label: Localización
+            type: string
+
+          - name: year
+            label: Año
+            type: string
+
+      - name: intro
+        label: Texto de introducción
+        type: text
+
+      - name: collections
+        label: Colecciones
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Título
+            type: string
+
+          - name: image
+            label: Fotografía
+            type: image
+
+      - name: projects
+        label: Proyectos
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Título
+            type: string
+
+          - name: description
+            label: Descripción
+            type: text
+
+          - name: image
+            label: Fotografía principal
+            type: image
+
+          - name: tags
+            label: Etiquetas
+            type: string
+            list: true
+
+      - name: quote
+        label: Frase central
+        type: text
+
+      - name: archive
+        label: Archivo visual
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "Fotografía {index}"
+        fields:
+          - name: image
+            label: Fotografía
+            type: image
+
+          - name: alt
+            label: Descripción de la fotografía
+            type: string
+
+      - name: about
+        label: Estudio
+        type: object
+        fields:
+          - name: image
+            label: Fotografía
+            type: image
+
+          - name: text
+            label: Texto
+            type: text
+
+          - name: location
+            label: Localización / disponibilidad
+            type: string
+
+      - name: socials
+        label: Redes y contacto
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+        fields:
+          - name: label
+            label: Nombre
+            type: string
+
+          - name: url
+            label: Enlace
+            type: string
+            
