@@ -1,13 +1,13 @@
 :root {
-  --paper: #fbfaf7;
-  --paper-soft: #f2eee8;
-  --brown: #4a2b1d;
-  --brown-dark: #28160f;
-  --brown-muted: #8a7061;
-  --orange: #e65f1d;
-  --orange-soft: #f4a06b;
+  --paper: #ffffff;
+  --paper-soft: #f6f3ef;
+  --brown: #3b2a22;
+  --brown-dark: #211712;
+  --brown-muted: #8f8177;
+  --orange: #d96b2b;
+  --orange-soft: #eda06e;
   --white: #ffffff;
-  --line: rgba(74, 43, 29, .18);
+  --line: rgba(59, 42, 34, .15);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
